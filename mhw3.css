@@ -1,0 +1,605 @@
+@font-face {
+    font-family: NeueMontreal;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://ci.assets.shazam.com/website-storybook/fonts/neuemontreal/NeueMontreal-Regular.woff2) format("woff2")
+}
+
+@font-face {
+    font-family: NeueMontreal;
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(https://ci.assets.shazam.com/website-storybook/fonts/neuemontreal/NeueMontreal-Medium.woff2) format("woff2")
+}
+
+@font-face {
+    font-family: NeueMontreal;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://ci.assets.shazam.com/website-storybook/fonts/neuemontreal/NeueMontreal-Bold.woff2) format("woff2")
+}
+
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+.intestazione {
+    background-color: transparent;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-family: NeueMontreal, Arial, sans-serif;
+}
+
+.intestazione-content {
+    position: relative;
+    z-index: 10;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1340px;
+}
+
+.intestazione-content-sinistra {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 74px !important;
+    width: 536px;
+}
+
+.banner {
+    padding: 19px 0 18px;
+    margin-right: 20px;
+    display: inline-block;
+    width: 120px;
+    height: 34px;
+    fill:white;
+    cursor:pointer;
+}
+
+.scritte {
+    color:rgb(255, 255, 255);
+    display: inline-block;
+    padding: 15px 20px;
+    font-size: 14px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: transparent;
+    border: none;
+    font-family: NeueMontreal, Arial, sans-serif;
+    cursor:pointer;
+}
+
+.scritte:hover {
+    text-decoration: underline;
+}
+
+.intestazione-content-destra {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0 20px;
+}
+
+.container-cerca {
+    width: 100%;
+    max-width: 300px;
+    align-content: center;
+    display:flex;
+    align-items: center;
+}
+
+#cerca {
+    background-color: hsla(0, 0%, 100%, .15);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: 0;
+    padding: 9px 50px 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.icona {
+    width: 18px;
+    height: 18px;
+    fill: white;
+    cursor:pointer;
+}
+
+.connetti-container {
+    display: inline-flex;
+    justify-content: flex-end;
+    font-size: 14px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    flex-direction: row;
+    font-family: NeueMontreal, Arial, sans-serif;
+    letter-spacing: .5px;
+}
+
+.scritta-connetti {
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    top: 1px;
+    right: 4px;
+    font-family: arial;
+    color: blue;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.music {
+    width: 65px;
+    height: 16.6265px;
+    position: relative;
+    cursor: pointer;
+}
+
+.home-page {
+    width: 100%;
+    background-image: linear-gradient(180deg, #0bf, #066aff 50%);
+    background-color: var(--color-gray-200);
+}
+
+.home-page-container {
+    padding: 140px 0 60px;
+    width: 95%;
+}
+
+.home-page-content {
+    display: flex;
+    gap: 0 100px;
+    align-items: center;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.foto-container {
+    width: 60%;
+    position: relative;
+    min-height: 400px;
+    border-radius: 8px;
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.immagine {
+    object-position: bottom;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.info-1 {
+    max-width: 600px;
+    margin: 0 auto 10px;
+    font-size: 50px;
+    color: var(--color-white);
+    font-family: NeueMontreal, Arial, sans-serif;
+    letter-spacing: .5px;
+    font-weight: 700;
+    color:white;
+}
+
+.info-2 {
+    font-size: 20px;
+    font-weight: 400;
+    color:white;
+    font-family: NeueMontreal, Arial, sans-serif;
+    letter-spacing: .5px;
+}
+
+.home-page-scan {
+    display: flex;
+    gap: 0 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: hsla(0, 0%, 100%, .1);
+    padding: 15px;
+    margin: 30px 0 20px;
+    border-radius: 16px;
+}
+
+.scanner {
+    width: 95px;
+    height: 95px;
+    border-radius: 8px;
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.qr {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    line-height: 0;
+}
+
+.scanner-text1 {
+    display:block;
+    font-size: 16px;
+    color:white;
+    font-weight: 400;
+    font-family: NeueMontreal, Arial, sans-serif;
+    letter-spacing: .5px;
+}
+
+.scanner-text2 {
+    margin: 10px 0;
+    opacity: .6;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: NeueMontreal, Arial, sans-serif;
+    letter-spacing: .5px;
+    color:white;
+}
+
+.testo-piccolo {
+    color: rgba(235, 235, 245, .6);
+    font-weight: 400;
+    font-size: 12px;
+    font-family: NeueMontreal, Arial, sans-serif;
+    letter-spacing: .5px;
+}
+
+strong {
+    text-decoration: underline;
+    color:white;
+    cursor: pointer;
+}
+
+.content-top {
+    background-color: rgb(255, 255, 255);
+    padding-top: 74px;
+    font-family: NeueMontreal, Arial, sans-serif;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.section-content {
+    text-align: center;
+    max-width: 671px;
+    margin: 0 auto 40px;
+}
+
+.scritta-1 {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: grey;
+    font-weight: 700;
+    letter-spacing: .5px;
+    text-align: center;
+    max-width: 671px;
+}
+
+.scritta-2 {
+    font-size: 50px;
+    color: black;
+    font-weight: 700;
+    letter-spacing: .5px;
+    text-align: center;
+    max-width: 671px;
+    margin: 0 auto 40px;
+    margin-bottom: 12px;
+}
+
+.scritta-3 {
+    font-size: 20px;
+    color: gray;
+    font-weight: 400;
+    letter-spacing: .5px;
+    text-align: center;
+    max-width: 671px;
+    margin: 0 auto 40px;
+}
+
+.classifica-container {
+    position: relative;
+    max-width: 1128px;
+    margin: 0 auto 40px;
+}
+
+.classifica {
+    position: relative;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.footer {
+    background-color: #141414;
+    font-family: NeueMontreal, Arial, sans-serif;
+    position: relative;
+    padding-top: 74px;
+    padding-bottom: 40px;
+}
+
+.footer-container-1 {
+    width: 95%;
+    padding-bottom: 0;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-content-1 {
+    display:flex;
+    flex: 1 1 100%;
+    min-width: 0;
+}
+
+.footer-logo {
+    fill: #fff;
+    width: 150px;
+    height: 43px;
+    margin: 12px 0 30px;
+    cursor: pointer;
+}
+
+.footer-scritta-1 {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color:white;
+    font-weight: 400;
+    font-family: NeueMontreal, Arial, sans-serif;
+    letter-spacing: .5px;
+}
+
+.footer-lingua {
+    position: relative;
+    background-color: transparent;
+    border: 1px solid #949494;
+    border-radius: 0;
+    color: #949494;
+    width: 100%;
+    padding: 10px 32px 10px 15px;
+    font-size: 18px;
+}
+
+.footer-spazio {
+    min-width: 150px;
+    min-height: 200px;
+    flex: 1 1 100%;
+}
+
+.footer-link {
+    min-width: 150px;
+    min-height: 200px;
+    flex: 1 1 100%;
+}
+
+.footer-title {
+    color: #949494;
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: 400;
+    margin: 0
+}
+
+.list-container {
+    margin-top: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.lista-footer {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    line-height: 23px;
+    padding: 8px 0;
+}
+
+.footer-1 {
+    flex: 1 1 100%;
+}
+
+.appstore {
+    transform: translateY(-100px);
+    pointer-events: none;
+    display: grid;
+    grid-template-columns: 150px 150px;
+    margin: 0 auto;
+    width: 95%;
+    padding-bottom: 0;
+    max-width: 1100px;
+}
+
+.iconstore {
+    object-fit: cover;
+    width: 128px;
+    height: 38px;
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
+    line-height: 0;
+    border-radius: 8px;
+}
+
+.ending-container {
+    display:block;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.ending-text1 {
+    text-align: center;
+    color: #949494;
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.ending-text2 {
+    font-size: 14px;
+    line-height: 22px;
+    padding-bottom: 60px;
+    color:white;
+    font-weight: 400;
+    font-family: NeueMontreal, Arial, sans-serif;
+    letter-spacing: .5px;
+    text-align: center;
+}
+
+@media (max-width: 400px) {
+
+    * {
+        max-width: 400px;
+    }
+
+    .scritte {
+        display: none;
+    }
+
+    .connetti-container {
+        display: none;
+    }
+
+    .home-page-content {
+        display:block;
+    }
+
+    .immagine {
+        align-content: center;
+    }
+
+    .foto-container {
+        width: 100%;
+    }
+
+    .info-1 {
+        max-width: 600px;
+        margin: 0 auto 10px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .info-2 {
+        font-size: 18px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .scanner-text1 {
+        text-align: center;
+    }
+
+    .scanner-text2 {
+        text-align: center;
+    }
+
+    .home-page-scan {
+        max-width: 400px;
+    }
+
+    .container-cerca {
+        max-width: 400px;
+    }
+
+    .testo-piccolo {
+        text-align: center;
+    }
+
+    .home-page-content {
+        width:95%;
+    }
+
+    .footer-content-1 {
+        display:block; 
+    }
+
+    .footer-1 {
+        width: 100%;
+        align-items: center;
+    }
+
+    .footer-spazio {
+        display: none;
+    }
+    
+    .appstore {
+        display: flex;
+        transform: translateY(0px);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+#button1 {
+    background-color: transparent;
+    border: none;
+}
+
+.popup {
+    position: absolute;
+    margin-top: 200px;
+    z-index: 12;
+    width: 283px;
+    overflow-y: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 32px 0 rgba(0, 0, 0, .1);
+    background-color: #fff;
+    display: inline-block;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.container-music {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    grid-template-columns: 40px 1fr;
+    grid-gap: 4px 10px;
+    gap: 4px 10px;
+    width: 100%;
+    padding: 10px 15px;
+    align-items: center;
+    cursor: pointer;
+    background: #f9fafc;
+}
+
+#song-img {
+    width: 50px;
+    height:50px;
+    border-radius: 8px;
+}
+
+#artist-img {
+    width: 50px;
+    height:50px;
+    border-radius: 8px;
+}
+
+.div1 {
+    display:flex;
+    align-items: center;
+}
+
+.div2 {
+    display:flex;
+    margin-top: 20px;
+    align-items: center;
+}
